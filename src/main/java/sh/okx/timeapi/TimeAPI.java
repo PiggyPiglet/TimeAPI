@@ -1,4 +1,4 @@
-package sh.okx.timeapi.api;
+package sh.okx.timeapi;
 
 import java.util.concurrent.TimeUnit;
 

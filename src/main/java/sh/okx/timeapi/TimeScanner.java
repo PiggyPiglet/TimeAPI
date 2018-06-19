@@ -1,9 +1,9 @@
-package sh.okx.timeapi.api;
+package sh.okx.timeapi;
 
 import java.util.Arrays;
 import java.util.function.Predicate;
 
-class TimeScanner {
+public class TimeScanner {
     private char[] time;
     private int index = 0;
 
