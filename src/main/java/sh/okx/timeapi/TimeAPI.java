@@ -3,13 +3,15 @@ package sh.okx.timeapi;
 import java.util.concurrent.TimeUnit;
 
 public class TimeAPI {
-    private static long DAYS_IN_WEEK = 7;
-    private static long DAYS_IN_MONTH = 30;
-    private static long DAYS_IN_YEAR = 365;
+    private static final long DAYS_IN_WEEK = 7;
+    private static final long DAYS_IN_MONTH = 30;
+    private static final long DAYS_IN_YEAR = 365;
 
+    private String ogTime;
     private long seconds;
 
     public TimeAPI(String time) {
+        this.ogTime = time;
         reparse(time);
     }
 
@@ -84,6 +86,9 @@ public class TimeAPI {
         return this;
     }
 
+    public String getOgTime() {
+        return ogTime;
+    }
 
     public long getNanoseconds() {
         return TimeUnit.SECONDS.toNanos(seconds);
