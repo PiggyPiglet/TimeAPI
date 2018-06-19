@@ -85,43 +85,43 @@ public class TimeAPI {
     }
 
 
-    public double getNanoseconds() {
+    public long getNanoseconds() {
         return TimeUnit.SECONDS.toNanos(seconds);
     }
 
-    public double getMicroseconds() {
+    public long getMicroseconds() {
         return TimeUnit.SECONDS.toMicros(seconds);
     }
 
-    public double getMilliseconds() {
+    public long getMilliseconds() {
         return TimeUnit.SECONDS.toMillis(seconds);
     }
 
-    public double getSeconds() {
+    public long getSeconds() {
         return seconds;
     }
 
-    public double getMinutes() {
-        return seconds / 60D;
+    public long getMinutes() {
+        return seconds / 60;
     }
 
-    public double getHours() {
-        return seconds / 3600D;
+    public long getHours() {
+        return seconds / 3600;
     }
 
-    public double getDays() {
-        return seconds / 86400D;
+    public long getDays() {
+        return seconds / 86400;
     }
 
-    public double getWeeks() {
+    public long getWeeks() {
         return getDays() / DAYS_IN_WEEK;
     }
 
-    public double getMonths() {
+    public long getMonths() {
         return getDays() / DAYS_IN_MONTH;
     }
 
-    public double getYears() {
+    public long getYears() {
         return getDays() / DAYS_IN_YEAR;
     }
 }
