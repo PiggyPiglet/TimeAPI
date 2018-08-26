@@ -107,15 +107,15 @@ public class TimeAPI {
     }
 
     public long getMinutes() {
-        return seconds / 60;
+        return TimeUnit.SECONDS.toMinutes(seconds);
     }
 
     public long getHours() {
-        return seconds / 3600;
+        return TimeUnit.SECONDS.toHours(seconds);
     }
 
     public long getDays() {
-        return seconds / 86400;
+        return TimeUnit.SECONDS.toDays(seconds);
     }
 
     public long getWeeks() {
@@ -128,5 +128,9 @@ public class TimeAPI {
 
     public long getYears() {
         return getDays() / DAYS_IN_YEAR;
+    }
+
+    public long getTicks() {
+        return seconds * 20;
     }
 }
