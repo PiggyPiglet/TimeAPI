@@ -3,7 +3,7 @@ plugins {
   id 'idea'
 }
 
-group = 'sh.okx'
-version = '1.3'
+group = 'me.piggypiglet'
+version = '1.4'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
