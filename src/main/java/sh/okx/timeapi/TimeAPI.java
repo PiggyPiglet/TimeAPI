@@ -136,6 +136,6 @@ public class TimeAPI {
     }
 
     public long getTicks() {
-        return millis * 20000;
+        return millis / 20000;
     }
 }
