@@ -107,7 +107,7 @@ public class TimeAPI {
         return millis;
     }
 
-    public long getMillis() {
+    public long getSeconds() {
         return TimeUnit.MILLISECONDS.toSeconds(millis);
     }
 
