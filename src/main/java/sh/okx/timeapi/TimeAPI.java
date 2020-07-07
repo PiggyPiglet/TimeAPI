@@ -6,6 +6,7 @@ public class TimeAPI {
     private static final long DAYS_IN_WEEK = 7;
     private static final long DAYS_IN_MONTH = 30;
     private static final long DAYS_IN_YEAR = 365;
+    private static final long TICKS_IN_MILLI = 50;
 
     private String ogTime;
     private long millis;
@@ -36,6 +37,12 @@ public class TimeAPI {
                 case "millis":
                 case "milliseconds":
                     millis += next;
+                    break;
+                case "t":
+                case "ts":
+                case "tick":
+                case "ticks":
+                    millis += next * TICKS_IN_MILLI;
                     break;
                 case "s":
                 case "sec":
@@ -136,6 +143,6 @@ public class TimeAPI {
     }
 
     public long getTicks() {
-        return millis / 20000;
+        return millis / TICKS_IN_MILLI;
     }
 }
