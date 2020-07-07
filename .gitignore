@@ -2,3 +2,5 @@
 .gradle/
 TimeAPI.iml
 build/
+gradlew*
+gradle/
